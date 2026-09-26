@@ -1496,7 +1496,7 @@ const AppContent = () => {
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-md transform rotate-3">
               <span className="text-2xl">🌱</span>
             </div>
-            <h1 className="text-xl font-bold tracking-tight">NourishUM</h1>
+            <h1 className="text-xl font-bold tracking-tight">Nourish-UM</h1>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8 font-semibold">
