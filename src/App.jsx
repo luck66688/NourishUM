@@ -415,7 +415,7 @@ const AppContent = () => {
       supplements: [
         {
           title: "Rice, other cereals, wholegrain cereal-based products and tubers",
-          url: "/new_supplements/Module_7_nutrition_month_grains_split.pdf",
+          url: "/new_supplements/stable%20food%20example.pdf",
           type: "document",
           source: "HE-AL Vol 6: Change Mindset to Prevent Diet-Related Diseases"
         },
