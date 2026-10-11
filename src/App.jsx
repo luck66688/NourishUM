@@ -272,7 +272,7 @@ const AppContent = () => {
         "Key takeaway identification: Write down one key message that changed your thinking."
       ],
       supplements: [
-        { title: "Our Choices Matter", url: "/new_supplements/M2.pdf", type: "document" }
+        { title: "Our Choices Matter", url: "/new_supplements/Our%20Choices%20Matter.pdf", type: "document" }
       ],
       quiz: [
         { question: "Which of the following best represents the main challenges of food systems?", options: ["High carbon footprint, low wages, unhealthy food choices", "Too many vegetables, too much food", "Not enough supermarkets", "People cooking too much"], correct: 0 },
