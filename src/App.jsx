@@ -355,7 +355,7 @@ const AppContent = () => {
       ],
       quiz: [
         { question: "Which statement is correct about the Malaysian Healthy Plate?", options: ["Half vegetables & fruits, quarter carbs, quarter protein", "Half carbs, quarter vegetables, quarter protein", "Only protein and vegetables are needed", "More meat and less vegetables"], correct: 0 },
-        { question: "You are choosing lunch at the UM canteen. Which plate follows the Malaysian Healthy Plate?", options: ["Rice + fried chicken only", "Rice + vegetables + egg/tofu", "Large portion of rice + no vegetables", "Noodles + processed meat"], correct: 1 }
+        { question: "You are choosing lunch at the UM canteen. Which plate follows the Malaysian Healthy Plate?", options: ["Rice + fried chicken only", "Rice + vegetables + stir-fried chicken", "Large portion of rice + no vegetables", "Noodles + processed meat"], correct: 1 }
       ]
     },
     {
