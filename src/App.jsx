@@ -351,7 +351,7 @@ const AppContent = () => {
         "Real-life commitment: Set a goal for your next meal."
       ],
       supplements: [
-        { title: "Malaysian Healthy Plate", url: "/new_supplements/M5.pdf", type: "document" }
+        { title: "Malaysian Healthy Plate", url: "/new_supplements/malaysian%20healthy%20plate.pdf", type: "document" }
       ],
       quiz: [
         { question: "Which statement is correct about the Malaysian Healthy Plate?", options: ["Half vegetables & fruits, quarter carbs, quarter protein", "Half carbs, quarter vegetables, quarter protein", "Only protein and vegetables are needed", "More meat and less vegetables"], correct: 0 },
