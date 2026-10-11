@@ -302,7 +302,7 @@ const AppContent = () => {
         { title: "Buying Food Locally", url: "/new_supplements/buying%20food%20locally.pdf", type: "document" }
       ],
       quiz: [
-        { question: "Buying food produced locally is always a better option for the planet, compared to food shipped from afar.", options: ["True", "False"], correct: 1 },
+        { question: "Buying food produced locally is always a better option for the planet, compared to food shipped from far.", options: ["True", "False"], correct: 1 },
         { question: "You are choosing fruits at a nearby supermarket. Which option is the most sustainable choice?", options: ["Imported apples from another country", "Packaged fruit snacks", "Locally grown papaya or banana", "Processed fruit juice with added sugar"], correct: 2 }
       ]
     },
