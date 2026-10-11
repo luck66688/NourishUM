@@ -290,7 +290,7 @@ const AppContent = () => {
       objectives: [
         "Discuss the environmental and social impact of foods based on production and transport.",
         "Compare the environmental footprint of food products depending on origin and seasonality.",
-        "Prioritize actions to reduce the negative impact of the foods you eat."
+        "Prioritise actions to reduce the negative impact of the foods you eat."
       ],
       actionSteps: [
         "Production and transport awareness: Identify origin of a common food item.",
