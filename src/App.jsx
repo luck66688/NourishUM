@@ -476,7 +476,7 @@ const AppContent = () => {
         "Reduce packaging: Bring reusable items."
       ],
       supplements: [
-        { title: "Food Waste and Packaging", url: "/new_supplements/M9.pdf", type: "document" }
+        { title: "Food Waste and Packaging", url: "/new_supplements/food%20waste%20and%20packaging.pdf", type: "document" }
       ],
       quiz: [
         { question: "What do you think, how big a problem is food waste?", options: ["Close to a third of the world's food production is wasted each year.", "The equivalent of 990 billion USD is lost to food waste each year.", "The world's food waste can feed 2 billion people.", "Food waste contributes to 8% to global greenhouse gas emissions."], correct: [0, 1, 2, 3] },
