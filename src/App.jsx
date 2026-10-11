@@ -502,7 +502,7 @@ const AppContent = () => {
         "Enjoy nutritious meals with friends/family."
       ],
       supplements: [
-        { title: "Changing Eating Habits", url: "/new_supplements/M10.pdf", type: "document" },
+        { title: "Changing Eating Habits", url: "/new_supplements/changing%20eating%20habits.pdf", type: "document" },
         {
           title: "Changing Eating Habits",
           url: "/new_supplements/nutrition%20month%20upf.pdf",
