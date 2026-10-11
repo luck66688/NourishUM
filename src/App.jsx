@@ -325,7 +325,7 @@ const AppContent = () => {
         "Real-life application: Identify one small change for next shopping trip."
       ],
       supplements: [
-        { title: "Reading Labels", url: "/new_supplements/M4.pdf", type: "document" }
+        { title: "Reading Labels", url: "/new_supplements/Reading%20Labels.pdf", type: "document" }
       ],
       quiz: [
         { question: "For the information in food label, which option is correct?", options: ["Portion size → Helps avoid overeating", "Food label origin → Helps achieve personal nutrition goals", "Nutrition information → Ensures traceability", "All are incorrect"], correct: 0 },
