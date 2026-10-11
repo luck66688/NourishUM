@@ -245,7 +245,7 @@ const AppContent = () => {
         "Reflection prompt: Write down why this principle matters for your health or the environment."
       ],
       supplements: [
-        { title: "What is a Sustainable Diet", url: "/new_supplements/M1.pdf", type: "document" }
+        { title: "What is a Sustainable Diet", url: "/new_supplements/What%20is%20a%20Sustainable%20Diet.pdf", type: "document" }
       ],
       quiz: [
         { question: "Which of the following best reflects sustainable diet principles?", options: ["Eat more meat and fewer vegetables", "Choose foods high in fat, sugar, and salt", "Eat a varied, balanced diet and include more plant-based foods", "Skip meals to reduce food consumption"], correct: 2 },
