@@ -299,7 +299,7 @@ const AppContent = () => {
         "Feasibility check: Identify barriers and solutions."
       ],
       supplements: [
-        { title: "Buying Food Locally", url: "/new_supplements/M3.pdf", type: "document" }
+        { title: "Buying Food Locally", url: "/new_supplements/buying%20food%20locally.pdf", type: "document" }
       ],
       quiz: [
         { question: "Buying food produced locally is always a better option for the planet, compared to food shipped from afar.", options: ["True", "False"], correct: 1 },
