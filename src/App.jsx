@@ -449,7 +449,7 @@ const AppContent = () => {
         "Sustainable protein choice: Choose lower-impact option when eating out."
       ],
       supplements: [
-        { title: "Fish, poultry/eggs, legumes, milk & milk products", url: "/new_supplements/M8%20protein.pdf", type: "document" },
+        { title: "Fish, poultry/eggs, legumes, milk & milk products", url: "/new_supplements/protein%20example.pdf", type: "document" },
         { title: "Fish, poultry/eggs, legumes, milk & milk products", url: "/new_supplements/Protein%20food%20serving.pdf", type: "document" }
       ],
       quiz: [
