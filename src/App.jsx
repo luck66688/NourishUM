@@ -3,7 +3,7 @@ import heroBg from './assets/hero-bg.png';
 import {
   Menu, X, Clock, PlayCircle, ChevronRight, User, Search,
   Facebook, Instagram, Twitter, ArrowLeft, Mail, Lock, CheckCircle,
-  BookOpen, Target, ExternalLink, Award, FileText, CheckSquare, ArrowRight
+  BookOpen, Target, ExternalLink, Award, FileText, CheckSquare, ArrowRight, Info
 } from 'lucide-react';
 import {
   BrowserRouter as Router,
@@ -884,6 +884,84 @@ const AppContent = () => {
     );
   };
 
+  const AboutView = () => (
+    <div className="flex-grow bg-[#F9FBE7] py-16 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-12">
+          <span className="inline-flex items-center gap-2 bg-[#F0F4C3] text-[#827717] px-4 py-2 rounded-full font-bold tracking-wide uppercase text-sm">
+            <Info size={16} /> About NourishUM
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mt-5 mb-4 font-handwriting">About NourishUM</h1>
+          <div className="h-1 w-24 bg-[#D4E157] mx-auto rounded-full"></div>
+        </div>
+
+        <div className="space-y-8">
+          <section className="bg-white rounded-2xl border-2 border-gray-800 p-7 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)]">
+            <div className="flex items-start gap-4 mb-5">
+              <div className="bg-[#D4E157] p-3 rounded-xl border border-gray-800 flex-shrink-0">
+                <span className="text-2xl">🌱</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-800">About NourishUM</h2>
+                <p className="text-sm text-[#827717] font-semibold mt-1">Nourish Your Body · Heal The Planet</p>
+              </div>
+            </div>
+            <p className="text-lg leading-relaxed text-gray-700">
+              NourishUM is an educational website developed as part of a research project at Universiti Malaya, Malaysia. It aims to support sustainable dietary practices among university students through learning materials on nutrition, sustainable food choices, and food waste reduction.
+            </p>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-gray-200 p-7 md:p-10 shadow-sm">
+            <div className="flex items-center gap-3 mb-7">
+              <div className="w-2 h-9 bg-[#D4E157] rounded-full"></div>
+              <h2 className="text-3xl font-bold text-gray-800">Research Team</h2>
+            </div>
+
+            <div className="space-y-6">
+              <div className="rounded-xl bg-[#F9FBE7] border border-[#D4E157] p-5">
+                <p className="text-sm uppercase tracking-wider text-[#827717] font-bold mb-2">Researcher</p>
+                <p className="text-lg font-bold text-gray-800">HAO YA <span className="font-normal text-gray-600">(PhD student)</span></p>
+              </div>
+
+              <div>
+                <p className="text-sm uppercase tracking-wider text-[#827717] font-bold mb-3">Supervisors</p>
+                <div className="grid gap-3 md:grid-cols-2">
+                  {[
+                    "ASSOCIATE PROF. DR. LIM YIN CHENG",
+                    "ASSOCIATE PROF. DR. WONG SENG YUE",
+                    "PROF. DR. WONG LI PING",
+                    "DR. NG AI KAH"
+                  ].map((name) => (
+                    <div key={name} className="border border-gray-200 rounded-xl px-4 py-3 text-gray-700 font-semibold bg-white">
+                      {name}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-[#F0F4C3] rounded-2xl border border-[#D4E157] p-7 md:p-10">
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <p className="text-sm uppercase tracking-wider text-[#827717] font-bold mb-2">Faculty / Department</p>
+                <p className="text-gray-800 leading-relaxed">Department of Social and Preventive Medicine, Faculty of Medicine, Universiti Malaya</p>
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-wider text-[#827717] font-bold mb-2">Contact</p>
+                <a href="mailto:yah3159@gmail.com" className="text-gray-800 underline decoration-[#827717] underline-offset-4 hover:text-[#827717]">HAO YA, yah3159@gmail.com</a>
+              </div>
+            </div>
+          </section>
+
+          <p className="text-center text-sm leading-relaxed text-gray-600 max-w-3xl mx-auto px-4">
+            This website supports the NourishUM research project. Its content is provided for educational purposes and does not replace personalised advice from a qualified healthcare professional.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+
   const ResourcesView = () => (
     <div className="flex-grow bg-[#F9FBE7] py-16 px-4">
       <div className="container mx-auto max-w-4xl">
@@ -1491,6 +1569,7 @@ const AppContent = () => {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8 font-semibold">
+            <Link to="/about" className={`hover:bg-white/20 px-3 py-1 rounded transition-colors ${location.pathname === '/about' ? 'bg-white/20' : ''}`}>About</Link>
             <Link to="/" className={`hover:bg-white/20 px-3 py-1 rounded transition-colors ${location.pathname === '/' ? 'bg-white/20' : ''}`}>Curriculum</Link>
             <Link to="/resources" className={`hover:bg-white/20 px-3 py-1 rounded transition-colors ${location.pathname === '/resources' ? 'bg-white/20' : ''}`}>Resources</Link>
 
@@ -1518,6 +1597,7 @@ const AppContent = () => {
 
         {isMenuOpen && (
           <div className="md:hidden bg-[#c0ca33] px-4 py-4 space-y-4 shadow-inner">
+            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="block hover:text-white w-full text-left font-medium">About</Link>
             <Link to="/" onClick={() => setIsMenuOpen(false)} className="block hover:text-white w-full text-left font-medium">Curriculum</Link>
             <Link to="/resources" onClick={() => setIsMenuOpen(false)} className="block hover:text-white w-full text-left font-medium">Resources</Link>
             {user ? (
@@ -1532,6 +1612,7 @@ const AppContent = () => {
       <main className="flex-grow flex flex-col">
         <Routes>
           <Route path="/" element={<HomeView />} />
+          <Route path="/about" element={<AboutView />} />
           <Route path="/quiz" element={<QuizView />} />
           <Route path="/resources" element={<ResourcesView />} />
           <Route path="/login" element={<AuthView type="login" />} />
