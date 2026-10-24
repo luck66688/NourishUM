@@ -379,12 +379,6 @@ const AppContent = () => {
       supplements: [
         {
           title: "Fruits & Vegetables",
-          url: "/new_supplements/Module_6_nutrition_month_veg_split.pdf",
-          type: "document",
-          source: "HE-AL Vol 6: Change Mindset to Prevent Diet-Related Diseases"
-        },
-        {
-          title: "Fruits & Vegetables",
           url: "/new_supplements/VF%20serving.pdf",
           type: "document"
         }
@@ -418,11 +412,6 @@ const AppContent = () => {
           url: "/new_supplements/stable%20food%20example.pdf",
           type: "document",
           source: "HE-AL Vol 6: Change Mindset to Prevent Diet-Related Diseases"
-        },
-        {
-          title: "Rice, other cereals, wholegrain cereal-based products and tubers",
-          url: "/new_supplements/Staple%20food%20serving.pdf",
-          type: "document"
         }
       ],
       quiz: [
@@ -449,8 +438,7 @@ const AppContent = () => {
         "Sustainable protein choice: Choose lower-impact option when eating out."
       ],
       supplements: [
-        { title: "Fish, poultry/eggs, legumes, milk & milk products", url: "/new_supplements/protein%20example.pdf", type: "document" },
-        { title: "Fish, poultry/eggs, legumes, milk & milk products", url: "/new_supplements/Protein%20food%20serving.pdf", type: "document" }
+        { title: "Fish, poultry/eggs, legumes, milk & milk products", url: "/new_supplements/protein%20example.pdf", type: "document" }
       ],
       quiz: [
         { question: "Which is a more sustainable protein choice?", options: ["Beef", "Processed meat", "Tofu or tempeh", "Fried chicken"], correct: 2 },
