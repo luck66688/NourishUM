@@ -900,6 +900,7 @@ const AppContent = () => {
 { title: "Sustainable Food@UM", url: "https://sustainability.um.edu.my/healthy-and-sustainable-food-um", type: "link" },
             { title: "Link for questionnaire (4-6 minutes)", url: "https://docs.google.com/forms/d/e/1FAIpQLSctqUuTHVofFWiRGZVWoJQXuIgipANhYjXwEPMgVASCXczsww/viewform", type: "link" },
             { title: "Link for food image submitting", url: "https://docs.google.com/forms/d/e/1FAIpQLSdcF17wCjv80idWm1dBRlnJk8xhR5sNIXz4tOMNLEgRpZW6Yg/viewform?usp=publish-editor", type: "link" },
+            { title: "MALAYSIAN DIETARY GUIDELINES", url: "/supplements/Malaysian%20Dietary%20Guidelines%202020.pdf", type: "document" },
             { title: "Reference", url: "/new_supplements/Reference.png", type: "document" }
           ].map((item, idx) => (
             <a
