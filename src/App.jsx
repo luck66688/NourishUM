@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import heroBg from './assets/hero-bg.png';
 import {
   Menu, X, Clock, PlayCircle, ChevronRight, User, Search,
-  Facebook, Instagram, Twitter, ArrowLeft, Mail, Lock, CheckCircle,
+  ArrowLeft, Mail, Lock, CheckCircle,
   BookOpen, Target, ExternalLink, Award, FileText, CheckSquare, ArrowRight, Info
 } from 'lucide-react';
 import {
@@ -1631,14 +1631,6 @@ const AppContent = () => {
             <p className="text-sm">A student-led initiative for sustainable eating at UM.</p>
           </div>
 
-          <div>
-            <h4 className="text-white font-bold mb-4">Connect</h4>
-            <div className="flex space-x-4">
-              <Twitter className="hover:text-[#D4E157] cursor-pointer" />
-              <Facebook className="hover:text-[#D4E157] cursor-pointer" />
-              <Instagram className="hover:text-[#D4E157] cursor-pointer" />
-            </div>
-          </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-xs">
           &copy; 2026 NourishUM. All rights reserved.
