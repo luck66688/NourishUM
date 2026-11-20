@@ -202,6 +202,7 @@ const AppContent = () => {
   // --- State Management ---
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [user, setUser] = useState(null); // null = guest, object = logged in
+  const [authReady, setAuthReady] = useState(!auth);
   const [authLoading, setAuthLoading] = useState(false);
   const [authError, setAuthError] = useState('');
   const [completedActions, setCompletedActions] = useState({}); // { moduleId: { actionIndex: boolean } }
@@ -213,6 +214,7 @@ const AppContent = () => {
     return onAuthStateChanged(auth, (firebaseUser) => {
       if (!firebaseUser) {
         setUser(null);
+        setAuthReady(true);
         return;
       }
 
@@ -221,6 +223,7 @@ const AppContent = () => {
         name: firebaseUser.displayName || 'Student',
         email: firebaseUser.email
       });
+      setAuthReady(true);
     });
   }, []);
 
@@ -1055,6 +1058,27 @@ const AppContent = () => {
     </div>
   );
 
+  const LoginRequiredView = () => (
+    <div className="flex-grow bg-[#F9FBE7] flex items-center justify-center py-20 px-4">
+      <div className="bg-white rounded-2xl border-2 border-gray-800 p-8 md:p-12 text-center max-w-lg shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)]">
+        <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-[#D4E157] border border-gray-800 flex items-center justify-center text-3xl">🔒</div>
+        <h1 className="text-3xl font-bold text-gray-800 mb-3">Log in to access the curriculum</h1>
+        <p className="text-gray-600 leading-relaxed mb-8">Please log in or create an account to view the NourishUM learning modules and course content.</p>
+        <div className="flex flex-col sm:flex-row justify-center gap-3">
+          <Link to="/login" className="bg-gray-800 text-white px-7 py-3 rounded-full font-bold hover:bg-gray-700 transition shadow">Log In</Link>
+          <Link to="/signup" className="bg-[#D4E157] text-gray-900 px-7 py-3 rounded-full font-bold hover:bg-[#c0ca33] transition shadow">Create Account</Link>
+        </div>
+      </div>
+    </div>
+  );
+
+  const ProtectedRoute = ({ children }) => {
+    if (!authReady) {
+      return <div className="flex-grow flex items-center justify-center bg-[#F9FBE7] text-gray-600">Checking your login status...</div>;
+    }
+    return user ? children : <LoginRequiredView />;
+  };
+
   // Memoized VideoPlayer to prevent re-renders when other state changes (like checkboxes)
   const VideoPlayer = React.memo(({ videoId, title }) => {
     return (
@@ -1611,13 +1635,13 @@ const AppContent = () => {
 
       <main className="flex-grow flex flex-col">
         <Routes>
-          <Route path="/" element={<HomeView />} />
+          <Route path="/" element={<ProtectedRoute><HomeView /></ProtectedRoute>} />
           <Route path="/about" element={<AboutView />} />
-          <Route path="/quiz" element={<QuizView />} />
+          <Route path="/quiz" element={<ProtectedRoute><QuizView /></ProtectedRoute>} />
           <Route path="/resources" element={<ResourcesView />} />
           <Route path="/login" element={<AuthView type="login" />} />
           <Route path="/signup" element={<AuthView type="signup" />} />
-          <Route path="/modules/:slug" element={<ModuleDetailView />} />
+          <Route path="/modules/:slug" element={<ProtectedRoute><ModuleDetailView /></ProtectedRoute>} />
         </Routes>
       </main>
 
